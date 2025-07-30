@@ -51,12 +51,14 @@ export const Navigation = () => {
                 />
               </Link>
             ))}
-            <Button 
-              size="sm" 
-              className="bg-gradient-hope hover:opacity-90 transition-opacity shadow-warm"
-            >
-              Donate Now
-            </Button>
+            <Link to="/donations">
+              <Button 
+                size="sm" 
+                className="bg-gradient-hope hover:opacity-90 transition-opacity shadow-warm"
+              >
+                Donate Now
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -91,12 +93,14 @@ export const Navigation = () => {
                 </Link>
               ))}
               <div className="px-3 py-2">
-                <Button 
-                  size="sm" 
-                  className="w-full bg-gradient-hope hover:opacity-90 transition-opacity"
-                >
-                  Donate Now
-                </Button>
+                <Link to="/donations">
+                  <Button 
+                    size="sm" 
+                    className="w-full bg-gradient-hope hover:opacity-90 transition-opacity"
+                  >
+                    Donate Now
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>

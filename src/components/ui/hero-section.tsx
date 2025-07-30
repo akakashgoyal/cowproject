@@ -1,5 +1,6 @@
 import { Button } from "./button";
 import { Heart, Shield, Home } from "lucide-react";
+import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-cows.jpg";
 
 export const HeroSection = () => {
@@ -33,20 +34,24 @@ export const HeroSection = () => {
             
             {/* Action buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Button 
-                size="lg" 
-                className="bg-gradient-hope hover:opacity-90 transition-all duration-300 transform hover:scale-105 shadow-compassion text-lg px-8 py-4"
-              >
-                <Heart className="w-5 h-5 mr-2" fill="currentColor" />
-                Donate Now
-              </Button>
-              <Button 
-                variant="outline" 
-                size="lg"
-                className="border-white text-white hover:bg-white hover:text-primary transition-all duration-300 text-lg px-8 py-4"
-              >
-                Learn Our Mission
-              </Button>
+              <Link to="/donations">
+                <Button 
+                  size="lg" 
+                  className="bg-gradient-hope hover:opacity-90 transition-all duration-300 transform hover:scale-105 shadow-compassion text-lg px-8 py-4"
+                >
+                  <Heart className="w-5 h-5 mr-2" fill="currentColor" />
+                  Donate Now
+                </Button>
+              </Link>
+              <Link to="/about">
+                <Button 
+                  variant="outline" 
+                  size="lg"
+                  className="border-white text-white hover:bg-white hover:text-primary transition-all duration-300 text-lg px-8 py-4"
+                >
+                  Learn Our Mission
+                </Button>
+              </Link>
             </div>
 
             {/* Impact stats */}
@@ -117,9 +122,11 @@ export const HeroSection = () => {
                 </div>
               </div>
 
-              <Button className="w-full bg-gradient-hero hover:opacity-90 transition-opacity text-lg py-3">
-                Donate Securely
-              </Button>
+              <Link to="/donations">
+                <Button className="w-full bg-gradient-hero hover:opacity-90 transition-opacity text-lg py-3">
+                  Donate Securely
+                </Button>
+              </Link>
 
               <p className="text-xs text-muted-foreground text-center mt-4">
                 🔒 Secure payment • Tax benefits available

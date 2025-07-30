@@ -1,5 +1,6 @@
 import { Button } from "./button";
 import { Heart, Package, Stethoscope, Truck, Home, Wheat } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export const ProductsSection = () => {
   const products = [
@@ -132,17 +133,21 @@ export const ProductsSection = () => {
 
               {/* Action Buttons */}
               <div className="flex gap-2">
-                <Button 
-                  className="flex-1 bg-gradient-hero hover:opacity-90 transition-opacity"
-                >
-                  Donate Now
-                </Button>
-                <Button 
-                  variant="outline" 
-                  className="hover:bg-compassion hover:text-white transition-colors"
-                >
-                  Learn More
-                </Button>
+                <Link to="/donations" className="flex-1">
+                  <Button 
+                    className="w-full bg-gradient-hero hover:opacity-90 transition-opacity"
+                  >
+                    Donate Now
+                  </Button>
+                </Link>
+                <Link to="/about">
+                  <Button 
+                    variant="outline" 
+                    className="hover:bg-compassion hover:text-white transition-colors"
+                  >
+                    Learn More
+                  </Button>
+                </Link>
               </div>
             </div>
           ))}

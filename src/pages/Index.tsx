@@ -4,6 +4,8 @@ import { MissionSection } from "@/components/ui/mission-section";
 import { ProductsSection } from "@/components/ui/products-section";
 import { ImpactStoriesSection } from "@/components/ui/impact-stories-section";
 import { EmergencySection } from "@/components/ui/emergency-section";
+import { VolunteerSection } from "@/components/ui/volunteer-section";
+import { GallerySection } from "@/components/ui/gallery-section";
 import { Footer } from "@/components/ui/footer";
 
 const Index = () => {
@@ -13,8 +15,10 @@ const Index = () => {
       <HeroSection />
       <MissionSection />
       <ProductsSection />
-      <EmergencySection />
       <ImpactStoriesSection />
+      <EmergencySection />
+      <VolunteerSection />
+      <GallerySection />
       <Footer />
     </div>
   );
