@@ -12,7 +12,7 @@ export const GallerySection = () => {
     {
       id: 1,
       type: "image",
-      src: "/src/assets/hero-cows.jpg",
+      src: "/src/assets/cows-forest.jpg",
       title: "Peaceful Morning at Goshala",
       description: "Cows enjoying their morning feed in our main sanctuary",
       category: "Goshala Life",

@@ -127,6 +127,15 @@ export default {
 						transform: 'scale(1)',
 						opacity: '1'
 					}
+				},
+				'count-up': {
+					'0%': { transform: 'scale(0.8)', opacity: '0' },
+					'50%': { transform: 'scale(1.1)', opacity: '0.8' },
+					'100%': { transform: 'scale(1)', opacity: '1' }
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0px)' },
+					'50%': { transform: 'translateY(-10px)' }
 				}
 			},
 			animation: {
@@ -135,7 +144,9 @@ export default {
 				'fade-in': 'fade-in 0.6s ease-out',
 				'gentle-bounce': 'gentle-bounce 2s ease-in-out infinite',
 				'slide-up': 'slide-up 0.8s ease-out',
-				'scale-gentle': 'scale-gentle 0.5s ease-out'
+				'scale-gentle': 'scale-gentle 0.5s ease-out',
+				'count-up': 'count-up 0.8s ease-out',
+				'float': 'float 3s ease-in-out infinite'
 			},
 			backgroundImage: {
 				'gradient-hero': 'var(--gradient-hero)',
