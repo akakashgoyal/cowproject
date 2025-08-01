@@ -11,6 +11,7 @@ import Blogs from "./pages/Blogs";
 import Contact from "./pages/Contact";
 import BlogDetails from "./pages/BlogDetails";
 import NotFound from "./pages/NotFound";
+import WebinarLanding from "./pages/WebinarLanding";
 import { FloatingDonateButton } from "./components/ui/floating-donate-button";
 
 const queryClient = new QueryClient();
@@ -22,7 +23,8 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Index />} />
+          <Route path="/" element={<WebinarLanding />} />
+          <Route path="/cow-donation" element={<Index />} />
           <Route path="/about" element={<About />} />
           <Route path="/donations" element={<Donations />} />
           <Route path="/donations/:id" element={<DonationDetail />} />

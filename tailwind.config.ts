@@ -53,10 +53,10 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				compassion: 'hsl(var(--compassion-green))',
-				hope: 'hsl(var(--hope-orange))',
-				earth: 'hsl(var(--earth-warm))',
-				nature: 'hsl(var(--nature-green))',
+				tech: 'hsl(var(--tech-blue))',
+				success: 'hsl(var(--success-green))',
+				warning: 'hsl(var(--warning-orange))',
+				info: 'hsl(var(--info-purple))',
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
