@@ -1,120 +1,156 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Clock, Calendar, Users, CheckCircle, Star, Play, Gift, User } from "lucide-react";
+import { Clock, Calendar, Users, CheckCircle, Star, Play, Gift, User, ArrowRight, TrendingUp, Zap, Target } from "lucide-react";
 import { CounterAnimation } from "@/components/ui/counter-animation";
 
 const WebinarLanding = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-primary/5 to-accent/10">
       {/* Hero Section */}
-      <section className="relative px-4 py-20 text-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-hero opacity-10"></div>
-        <div className="container mx-auto max-w-6xl relative z-10">
-          <Badge className="mb-6 px-6 py-2 text-lg bg-primary/10 text-primary border-primary/20">
-            For Content Creators, Bloggers & Digital Marketers!
+      <section className="relative px-6 py-24 text-center overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-hero opacity-20"></div>
+        <div className="container mx-auto max-w-7xl relative z-10">
+          <Badge className="mb-8 px-8 py-3 text-xl bg-primary/15 text-primary border-primary/30 shadow-lg">
+            🔥 For Content Creators, Bloggers & Digital Marketers!
           </Badge>
           
-          <h1 className="text-4xl md:text-6xl font-bold mb-8 leading-tight">
-            Learn how to become a <span className="text-primary">successful blogger</span> who can
+          <h1 className="text-5xl md:text-7xl font-bold mb-12 leading-tight bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+            Learn how to become a <span className="text-primary drop-shadow-lg">successful blogger</span> who can
           </h1>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
             {[
-              "🚀 Create viral content",
-              "💰 Monetize your blog effectively", 
-              "📈 Grow your audience organically",
-              "🎯 Build a sustainable online business"
+              { icon: "🚀", text: "Create viral content that gets millions of views" },
+              { icon: "💰", text: "Monetize your blog and earn $10K+ monthly" }, 
+              { icon: "📈", text: "Grow your audience from 0 to 100K followers" },
+              { icon: "🎯", text: "Build a 6-figure online business empire" }
             ].map((benefit, index) => (
-              <Card key={index} className="p-6 bg-card/80 backdrop-blur border-primary/20 hover:shadow-warm transition-all duration-300">
-                <p className="text-lg font-medium">{benefit}</p>
+              <Card key={index} className="p-8 bg-card/90 backdrop-blur border-primary/30 hover:shadow-warm transition-all duration-500 hover:scale-105 group">
+                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">{benefit.icon}</div>
+                <p className="text-lg font-semibold leading-tight">{benefit.text}</p>
               </Card>
             ))}
           </div>
 
           {/* Webinar Info */}
-          <div className="bg-card/90 backdrop-blur rounded-2xl p-8 shadow-warm border border-primary/20 mb-8">
-            <div className="grid md:grid-cols-3 gap-6 mb-8">
-              <div className="flex items-center justify-center gap-2">
-                <Calendar className="h-6 w-6 text-primary" />
+          <div className="bg-gradient-to-br from-card/95 to-primary/10 backdrop-blur rounded-3xl p-12 shadow-warm border border-primary/30 mb-12 relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-accent/20 rounded-full -translate-y-16 translate-x-16"></div>
+            <div className="absolute bottom-0 left-0 w-24 h-24 bg-primary/20 rounded-full translate-y-12 -translate-x-12"></div>
+            
+            <div className="grid md:grid-cols-3 gap-8 mb-12 relative z-10">
+              <div className="flex items-center justify-center gap-3 p-6 bg-white/50 rounded-2xl shadow-sm">
+                <Calendar className="h-8 w-8 text-primary" />
                 <div>
-                  <p className="text-sm text-muted-foreground">Date (Sunday)</p>
-                  <p className="text-xl font-bold">15th Dec'24</p>
+                  <p className="text-sm text-muted-foreground font-medium">Date (Sunday)</p>
+                  <p className="text-2xl font-bold text-foreground">15th Dec'24</p>
                 </div>
               </div>
-              <div className="flex items-center justify-center gap-2">
-                <Clock className="h-6 w-6 text-primary" />
+              <div className="flex items-center justify-center gap-3 p-6 bg-white/50 rounded-2xl shadow-sm">
+                <Clock className="h-8 w-8 text-primary" />
                 <div>
-                  <p className="text-sm text-muted-foreground">Time</p>
-                  <p className="text-xl font-bold">7:00 PM IST</p>
+                  <p className="text-sm text-muted-foreground font-medium">Time</p>
+                  <p className="text-2xl font-bold text-foreground">7:00 PM IST</p>
                 </div>
               </div>
-              <div className="flex items-center justify-center gap-2">
-                <Users className="h-6 w-6 text-primary" />
+              <div className="flex items-center justify-center gap-3 p-6 bg-white/50 rounded-2xl shadow-sm">
+                <Users className="h-8 w-8 text-primary" />
                 <div>
-                  <p className="text-sm text-muted-foreground">Language</p>
-                  <p className="text-xl font-bold">English & Hindi</p>
+                  <p className="text-sm text-muted-foreground font-medium">Language</p>
+                  <p className="text-2xl font-bold text-foreground">English & Hindi</p>
                 </div>
               </div>
             </div>
             
-            <p className="text-lg mb-6">Host: <span className="font-bold text-primary">SARAH JOHNSON</span></p>
+            <div className="text-center mb-8 relative z-10">
+              <p className="text-xl mb-2">🎯 Host:</p>
+              <p className="text-3xl font-bold text-primary">SARAH JOHNSON</p>
+              <p className="text-lg text-accent font-medium">7-Figure Blogger & Digital Marketing Expert</p>
+            </div>
             
             {/* Countdown Timer */}
-            <div className="mb-8">
-              <h3 className="text-2xl font-bold mb-4">Webinar Starts In:</h3>
-              <div className="grid grid-cols-4 gap-4 max-w-md mx-auto">
+            <div className="mb-12 relative z-10">
+              <h3 className="text-3xl font-bold mb-6 text-center">⏰ Webinar Starts In:</h3>
+              <div className="grid grid-cols-4 gap-4 max-w-lg mx-auto">
                 {[
                   { value: 5, label: "Days" },
                   { value: 12, label: "Hours" },
                   { value: 45, label: "Minutes" },
                   { value: 30, label: "Seconds" }
                 ].map((time, index) => (
-                  <div key={index} className="bg-primary text-primary-foreground rounded-xl p-4">
-                    <div className="text-3xl font-bold">
+                  <div key={index} className="bg-gradient-to-br from-primary to-accent text-white rounded-2xl p-6 shadow-lg">
+                    <div className="text-4xl font-bold">
                       <CounterAnimation target={time.value} />
                     </div>
-                    <div className="text-sm">{time.label}</div>
+                    <div className="text-sm font-medium">{time.label}</div>
                   </div>
                 ))}
               </div>
             </div>
             
-            <Button size="lg" className="text-xl px-12 py-6 bg-gradient-hero hover:opacity-90 shadow-warm">
-              Yes, I Want To Master Blogging!<br />
-              Register for the webinar now at just ₹299/- <span className="line-through text-muted-foreground">₹799/-</span>
-            </Button>
+            <div className="text-center relative z-10">
+              <Button size="lg" className="text-2xl px-16 py-8 bg-gradient-hero hover:opacity-90 shadow-warm rounded-2xl border-2 border-white/30 hover:scale-105 transition-all duration-300">
+                🔥 YES! I Want To Master Blogging!<br />
+                <span className="text-lg">Register NOW at just ₹299/- <span className="line-through text-white/70">₹799/-</span></span>
+              </Button>
+            </div>
           </div>
           
-          <p className="text-lg font-medium text-accent">
-            Register before 10th December to unlock bonuses worth ₹7,997
-          </p>
+          <div className="bg-gradient-to-r from-accent/20 to-primary/20 rounded-2xl p-8 border border-accent/30">
+            <p className="text-2xl font-bold text-center text-accent animate-pulse">
+              🎁 Register before 10th December to unlock bonuses worth ₹7,997 🎁
+            </p>
+          </div>
         </div>
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 px-4 bg-muted/30">
-        <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl font-bold text-center mb-12">What people have to say about the Webinar...</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {[1, 2, 3].map((i) => (
-              <Card key={i} className="p-6 bg-card border-primary/20">
-                <div className="flex items-center gap-2 mb-4">
+      <section className="py-24 px-6 bg-gradient-to-br from-muted/50 to-primary/10">
+        <div className="container mx-auto max-w-7xl">
+          <h2 className="text-4xl font-bold text-center mb-16">⭐ What people have to say about the Webinar...</h2>
+          <div className="grid md:grid-cols-3 gap-10">
+            {[
+              {
+                name: "Alex Kumar",
+                role: "Tech Blogger",
+                text: "This webinar completely transformed my blogging journey. I went from 100 to 10,000 monthly visitors in just 3 months!",
+                revenue: "₹50K+/month"
+              },
+              {
+                name: "Priya Sharma", 
+                role: "Lifestyle Blogger",
+                text: "Sarah's strategies helped me monetize my blog and now I'm earning more than my corporate job!",
+                revenue: "₹75K+/month"
+              },
+              {
+                name: "Rahul Verma",
+                role: "Food Blogger", 
+                text: "From zero to 100K followers in 6 months. This webinar is pure gold for anyone serious about blogging!",
+                revenue: "₹1L+/month"
+              }
+            ].map((testimonial, i) => (
+              <Card key={i} className="p-8 bg-card/90 backdrop-blur border-primary/30 hover:shadow-compassion transition-all duration-500 hover:scale-105">
+                <div className="flex items-center gap-2 mb-6">
                   {[...Array(5)].map((_, index) => (
-                    <Star key={index} className="h-5 w-5 fill-warning text-warning" />
+                    <Star key={index} className="h-6 w-6 fill-warning text-warning" />
                   ))}
                 </div>
-                <p className="text-muted-foreground mb-4">
-                  "This webinar completely transformed my blogging journey. I went from 100 to 10,000 monthly visitors in just 3 months!"
+                <p className="text-muted-foreground mb-6 text-lg leading-relaxed italic">
+                  "{testimonial.text}"
                 </p>
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center">
-                    <User className="h-6 w-6 text-primary" />
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center">
+                      <User className="h-7 w-7 text-white" />
+                    </div>
+                    <div>
+                      <p className="font-bold text-lg">{testimonial.name}</p>
+                      <p className="text-sm text-muted-foreground">{testimonial.role}</p>
+                    </div>
                   </div>
-                  <div>
-                    <p className="font-semibold">Alex Kumar</p>
-                    <p className="text-sm text-muted-foreground">Tech Blogger</p>
-                  </div>
+                  <Badge className="bg-success/20 text-success border-success/30 px-3 py-1">
+                    {testimonial.revenue}
+                  </Badge>
                 </div>
               </Card>
             ))}
@@ -376,14 +412,87 @@ const WebinarLanding = () => {
         </div>
       </section>
 
-      {/* Footer Links */}
-      <footer className="py-8 px-4 border-t border-border">
+      {/* Hype Creating Footer */}
+      <section className="py-16 px-6 bg-gradient-to-br from-destructive/90 to-accent/90 text-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent"></div>
+        <div className="container mx-auto max-w-4xl text-center relative z-10">
+          <div className="mb-8">
+            <Badge className="bg-white/20 text-white border-white/30 px-6 py-2 text-lg mb-4">
+              ⚠️ URGENT: Limited Time Offer
+            </Badge>
+            <h2 className="text-4xl md:text-6xl font-bold mb-4 animate-pulse">
+              ONLY 47 SPOTS LEFT!
+            </h2>
+            <p className="text-xl md:text-2xl mb-6 text-white/90">
+              Don't Miss This Life-Changing Opportunity
+            </p>
+          </div>
+          
+          <div className="bg-black/30 rounded-3xl p-8 mb-8 backdrop-blur border border-white/20">
+            <h3 className="text-3xl font-bold mb-6">⏰ Offer Expires In:</h3>
+            <div className="grid grid-cols-2 gap-6 max-w-sm mx-auto mb-8">
+              <div className="bg-white/20 backdrop-blur rounded-2xl p-6 border border-white/30">
+                <div className="text-4xl font-bold">15</div>
+                <div className="text-lg font-medium">Minutes</div>
+              </div>
+              <div className="bg-white/20 backdrop-blur rounded-2xl p-6 border border-white/30">
+                <div className="text-4xl font-bold">45</div>
+                <div className="text-lg font-medium">Seconds</div>
+              </div>
+            </div>
+            
+            <div className="space-y-4 mb-8">
+              <div className="flex items-center justify-center gap-3 text-xl">
+                <TrendingUp className="h-6 w-6" />
+                <span>Regular Price: ₹799/-</span>
+              </div>
+              <div className="flex items-center justify-center gap-3 text-3xl font-bold">
+                <Zap className="h-8 w-8 text-yellow-300" />
+                <span>Today Only: ₹299/-</span>
+              </div>
+              <div className="text-lg text-white/80">
+                Save ₹500 + Get ₹7,997 Worth Bonuses FREE!
+              </div>
+            </div>
+            
+            <Button size="lg" className="text-2xl px-16 py-8 bg-white text-destructive hover:bg-white/90 rounded-2xl shadow-2xl hover:scale-105 transition-all duration-300 font-bold">
+              🚀 SECURE MY SPOT NOW!
+            </Button>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-6 text-center">
+            <div className="bg-white/10 rounded-2xl p-6 backdrop-blur">
+              <Target className="h-12 w-12 mx-auto mb-3 text-yellow-300" />
+              <h4 className="font-bold text-lg mb-2">Instant Access</h4>
+              <p className="text-white/80">Get immediate confirmation & calendar invite</p>
+            </div>
+            <div className="bg-white/10 rounded-2xl p-6 backdrop-blur">
+              <CheckCircle className="h-12 w-12 mx-auto mb-3 text-green-300" />
+              <h4 className="font-bold text-lg mb-2">100% Guarantee</h4>
+              <p className="text-white/80">Learn or get your money back</p>
+            </div>
+            <div className="bg-white/10 rounded-2xl p-6 backdrop-blur">
+              <Gift className="h-12 w-12 mx-auto mb-3 text-pink-300" />
+              <h4 className="font-bold text-lg mb-2">Exclusive Bonuses</h4>
+              <p className="text-white/80">Worth ₹7,997 - Today only!</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Final Footer Links */}
+      <footer className="py-8 px-6 bg-foreground text-background">
         <div className="container mx-auto max-w-4xl">
-          <div className="flex flex-wrap justify-center gap-6 text-sm text-muted-foreground">
-            <a href="#" className="hover:text-primary transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-primary transition-colors">Refund & Return</a>
-            <a href="#" className="hover:text-primary transition-colors">Terms & Conditions</a>
-            <a href="#" className="hover:text-primary transition-colors">Contact Us</a>
+          <div className="text-center mb-6">
+            <p className="text-sm opacity-80">
+              © 2024 Blogging Mastery Webinar. Transform your passion into profit.
+            </p>
+          </div>
+          <div className="flex flex-wrap justify-center gap-6 text-sm opacity-70">
+            <a href="#" className="hover:opacity-100 transition-opacity">Privacy Policy</a>
+            <a href="#" className="hover:opacity-100 transition-opacity">Refund & Return</a>
+            <a href="#" className="hover:opacity-100 transition-opacity">Terms & Conditions</a>
+            <a href="#" className="hover:opacity-100 transition-opacity">Contact Us</a>
           </div>
         </div>
       </footer>
